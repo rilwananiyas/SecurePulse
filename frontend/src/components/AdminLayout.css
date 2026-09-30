@@ -1,0 +1,215 @@
+/* =========================================================
+   SECUREPULSE ADMIN LAYOUT
+   Shared layout for:
+   - Admin Dashboard
+   - Users
+   - Security Alerts
+   - Login Activity
+   - Profile
+========================================================= */
+
+
+/* =========================================================
+   MAIN LAYOUT
+========================================================= */
+
+.admin-layout {
+  width: 100%;
+  min-height: 100vh;
+
+  margin: 0;
+  padding: 0;
+
+  background: #f8fafc;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.admin-main-content {
+  width: calc(100% - 250px);
+  min-height: 100vh;
+
+  margin-left: 250px;
+  padding: 0;
+
+  background: #f8fafc;
+
+  box-sizing: border-box;
+
+  overflow-x: hidden;
+}
+
+
+/* Make sure child pages use available width */
+
+.admin-main-content > * {
+  width: 100%;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+
+.admin-mobile-menu {
+  display: none;
+
+  position: fixed;
+
+  top: 16px;
+  left: 16px;
+
+  z-index: 1100;
+
+  width: 44px;
+  height: 44px;
+
+  padding: 0;
+
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+
+  background: #ffffff;
+  color: #0f172a;
+
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  font-size: 22px;
+  line-height: 1;
+
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+/* =========================================================
+   MOBILE MENU HOVER
+========================================================= */
+
+.admin-mobile-menu:hover {
+  background: #f8fafc;
+
+  border-color: #cbd5e1;
+}
+
+
+/* =========================================================
+   MOBILE MENU ACTIVE
+========================================================= */
+
+.admin-mobile-menu:active {
+  transform: scale(0.96);
+}
+
+
+/* =========================================================
+   MOBILE MENU FOCUS
+========================================================= */
+
+.admin-mobile-menu:focus-visible {
+  outline: 2px solid #2563eb;
+
+  outline-offset: 2px;
+}
+
+
+/* =========================================================
+   SIDEBAR OVERLAY
+========================================================= */
+
+.admin-layout-overlay {
+  display: none;
+
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 999;
+
+  background: rgba(15, 23, 42, 0.45);
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+
+  .admin-main-content {
+    width: calc(100% - 250px);
+
+    margin-left: 250px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .admin-main-content {
+    width: 100%;
+
+    min-height: 100vh;
+
+    margin-left: 0;
+  }
+
+
+  .admin-mobile-menu {
+    display: flex;
+  }
+
+
+  .admin-layout-overlay {
+    display: block;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .admin-main-content {
+    width: 100%;
+
+    margin-left: 0;
+  }
+
+
+  .admin-mobile-menu {
+    top: 12px;
+    left: 12px;
+
+    width: 42px;
+    height: 42px;
+
+    font-size: 20px;
+  }
+
+}
+

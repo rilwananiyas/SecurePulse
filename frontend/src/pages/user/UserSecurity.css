@@ -1,0 +1,1006 @@
+/* =========================================================
+   SECUREPULSE USER SECURITY SETTINGS
+   Complete UserSecurity.css
+========================================================= */
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.user-security-main-content {
+  min-height: 100vh;
+  margin-left: 250px;
+  width: calc(100% - 250px);
+  padding: 35px 40px;
+  background: #f8fafc;
+  box-sizing: border-box;
+  color: #1e293b;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.user-security-page-header {
+  margin-bottom: 30px;
+}
+
+.user-security-page-header h1 {
+  margin: 0 0 8px;
+  font-size: 30px;
+  font-weight: 750;
+  color: #0f172a;
+  letter-spacing: -0.5px;
+}
+
+.user-security-page-header p {
+  margin: 0;
+  color: #64748b;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   SECURITY CARD
+========================================================= */
+
+.user-security-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  margin-bottom: 24px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(15, 23, 42, 0.05);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.user-security-card:hover {
+  border-color: #d7e2f0;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+
+/* =========================================================
+   CARD HEADER
+========================================================= */
+
+.user-security-card-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 22px 25px;
+  border-bottom: 1px solid #eef2f7;
+  background: #ffffff;
+}
+
+.user-security-card-icon {
+  width: 46px;
+  height: 46px;
+  min-width: 46px;
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 21px;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
+}
+
+.user-security-card-header h2 {
+  margin: 0;
+  font-size: 19px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.user-security-card-header p {
+  margin: 4px 0 0;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   SECURITY ITEMS
+========================================================= */
+
+.user-security-items {
+  padding: 5px 25px;
+}
+
+.user-security-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px 0;
+  border-bottom: 1px solid #eef2f7;
+}
+
+.user-security-item:last-child {
+  border-bottom: none;
+}
+
+.user-security-item-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  min-width: 0;
+}
+
+.security-item-icon {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 19px;
+}
+
+.security-item-icon.safe {
+  background: #ecfdf5;
+  color: #059669;
+}
+
+.security-item-icon.warning {
+  background: #fff7ed;
+  color: #ea580c;
+}
+
+.user-security-item-left h3 {
+  margin: 0 0 4px;
+  font-size: 15px;
+  font-weight: 650;
+  color: #1e293b;
+}
+
+.user-security-item-left p {
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   SECURITY STATUS
+========================================================= */
+
+.security-enabled {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #059669;
+  font-size: 13px;
+  font-weight: 650;
+  white-space: nowrap;
+}
+
+.security-status-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 11px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 650;
+  background: #ecfdf5;
+  color: #047857;
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   SECURITY ACTION BUTTON
+========================================================= */
+
+.security-action-button {
+  border: 1px solid #dbe3ef;
+  background: #ffffff;
+  color: #2563eb;
+  padding: 9px 15px;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 650;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.security-action-button:hover {
+  background: #eff6ff;
+  border-color: #bfdbfe;
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   NOTIFICATION SUCCESS / ERROR MESSAGES
+========================================================= */
+
+.notification-settings-success,
+.notification-settings-error {
+  margin: 18px 25px 0;
+  padding: 12px 15px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.notification-settings-success {
+  background: #ecfdf5;
+  border: 1px solid #bbf7d0;
+  color: #047857;
+}
+
+.notification-settings-error {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #b91c1c;
+}
+
+
+/* =========================================================
+   SECURITY TOGGLE
+   MODERN COMPACT DESIGN
+========================================================= */
+
+.security-toggle {
+  position: relative;
+  width: 46px;
+  height: 26px;
+  min-width: 46px;
+  flex-shrink: 0;
+}
+
+.security-toggle input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.security-toggle-slider {
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+  background: #d1d5db;
+  border: 1px solid #cbd5e1;
+  border-radius: 30px;
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+/* TOGGLE CIRCLE */
+
+.security-toggle-slider::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 2px;
+  top: 2px;
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(15, 23, 42, 0.2);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+/* ON STATE */
+
+.security-toggle input:checked + .security-toggle-slider {
+  background: #2563eb;
+  border-color: #2563eb;
+  box-shadow: 0 3px 9px rgba(37, 99, 235, 0.2);
+}
+
+
+/* MOVE CIRCLE WHEN ON */
+
+.security-toggle
+  input:checked
+  + .security-toggle-slider::before {
+  transform: translateX(20px);
+  box-shadow: 0 2px 5px rgba(15, 23, 42, 0.25);
+}
+
+
+/* HOVER OFF */
+
+.security-toggle-slider:hover {
+  border-color: #94a3b8;
+}
+
+
+/* HOVER ON */
+
+.security-toggle
+  input:checked
+  + .security-toggle-slider:hover {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+}
+
+
+/* KEYBOARD FOCUS */
+
+.security-toggle
+  input:focus-visible
+  + .security-toggle-slider {
+  outline: 3px solid rgba(37, 99, 235, 0.18);
+  outline-offset: 2px;
+}
+
+
+/* =========================================================
+   QUICK ACTIONS
+========================================================= */
+
+.user-security-quick-actions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  padding: 20px 25px 25px;
+}
+
+.user-security-quick-button {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-height: 64px;
+  padding: 13px 15px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #334155;
+  cursor: pointer;
+  text-align: left;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.user-security-quick-button:hover {
+  background: #f8fbff;
+  border-color: #bfdbfe;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.06);
+}
+
+.quick-button-icon {
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 17px;
+}
+
+.user-security-quick-button span:not(.quick-button-icon):not(.quick-arrow) {
+  flex: 1;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.quick-arrow {
+  color: #94a3b8;
+  font-size: 16px;
+  transition: transform 0.2s ease;
+}
+
+.user-security-quick-button:hover .quick-arrow {
+  transform: translateX(3px);
+  color: #2563eb;
+}
+
+
+/* =========================================================
+   SECURITY TIP
+========================================================= */
+
+.user-security-tip {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 24px;
+  padding: 20px 22px;
+  border: 1px solid #dbeafe;
+  border-radius: 16px;
+  background: linear-gradient(
+    135deg,
+    #eff6ff 0%,
+    #f8fbff 100%
+  );
+}
+
+.user-security-tip-icon {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 11px;
+  background: #dbeafe;
+  color: #2563eb;
+  font-size: 19px;
+}
+
+.user-security-tip h3 {
+  margin: 0 0 5px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #1e3a8a;
+}
+
+.user-security-tip p {
+  margin: 0;
+  color: #475569;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.user-security-footer {
+  padding: 10px 0 20px;
+  text-align: center;
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   CHANGE PASSWORD OVERLAY
+========================================================= */
+
+.change-password-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(15, 23, 42, 0.62);
+  backdrop-filter: blur(6px);
+  animation: changePasswordFadeIn 0.2s ease;
+}
+
+@keyframes changePasswordFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* =========================================================
+   CHANGE PASSWORD MODAL
+========================================================= */
+
+.change-password-modal {
+  position: relative;
+  width: 100%;
+  max-width: 510px;
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 25px 70px rgba(15, 23, 42, 0.25);
+  animation: changePasswordSlideUp 0.25s ease;
+}
+
+@keyframes changePasswordSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* =========================================================
+   CHANGE PASSWORD HEADER
+========================================================= */
+
+.change-password-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 23px 25px;
+  border-bottom: 1px solid #eef2f7;
+  background: #ffffff;
+}
+
+.change-password-header > div:first-child {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+}
+
+.change-password-header h2 {
+  position: relative;
+  margin: 0;
+  padding-top: 2px;
+  font-size: 20px;
+  font-weight: 750;
+  color: #0f172a;
+}
+
+.change-password-header h2::before {
+  content: "";
+  position: absolute;
+  left: -13px;
+  top: 4px;
+  width: 4px;
+  height: 18px;
+  border-radius: 4px;
+  background: #2563eb;
+}
+
+.change-password-header p {
+  margin: 5px 0 0;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   CLOSE BUTTON
+========================================================= */
+
+.change-password-close {
+  width: 34px;
+  height: 34px;
+  min-width: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e2e8f0;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #64748b;
+  font-size: 18px;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.change-password-close:hover {
+  background: #fef2f2;
+  border-color: #fecaca;
+  color: #dc2626;
+  transform: rotate(3deg);
+}
+
+
+/* =========================================================
+   PASSWORD SUCCESS / ERROR
+========================================================= */
+
+.password-success-message,
+.password-error-message {
+  margin: 18px 25px 0;
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.password-success-message {
+  background: #ecfdf5;
+  border: 1px solid #bbf7d0;
+  color: #047857;
+}
+
+.password-error-message {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #b91c1c;
+}
+
+
+/* =========================================================
+   CHANGE PASSWORD FORM
+========================================================= */
+
+.change-password-form {
+  padding: 25px;
+}
+
+.password-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-bottom: 19px;
+}
+
+.password-field label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #334155;
+}
+
+.password-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-input-wrapper input {
+  width: 100%;
+  height: 46px;
+  box-sizing: border-box;
+  padding: 0 47px 0 14px;
+  border: 1px solid #dbe2ea;
+  border-radius: 10px;
+  outline: none;
+  background: #ffffff;
+  color: #0f172a;
+  font-size: 14px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.password-input-wrapper input::placeholder {
+  color: #a1acba;
+}
+
+.password-input-wrapper input:hover {
+  border-color: #c5d1df;
+}
+
+.password-input-wrapper input:focus {
+  border-color: #2563eb;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+
+/* =========================================================
+   SHOW / HIDE PASSWORD BUTTON
+========================================================= */
+
+.password-show-button {
+  position: absolute;
+  right: 7px;
+  top: 50%;
+  width: 34px;
+  height: 34px;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: #64748b;
+  cursor: pointer;
+  font-size: 15px;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.password-show-button:hover {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.password-show-button:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 1px;
+}
+
+
+/* =========================================================
+   PASSWORD HELPER TEXT
+========================================================= */
+
+.password-field small {
+  display: block;
+  margin-top: 1px;
+  color: #94a3b8;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   CHANGE PASSWORD ACTIONS
+========================================================= */
+
+.change-password-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  margin-top: 5px;
+  padding-top: 20px;
+  border-top: 1px solid #eef2f7;
+}
+
+.change-password-cancel,
+.change-password-submit {
+  min-height: 42px;
+  padding: 10px 18px;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.change-password-cancel {
+  border: 1px solid #dbe2ea;
+  background: #ffffff;
+  color: #475569;
+}
+
+.change-password-cancel:hover {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+  color: #1e293b;
+  transform: translateY(-1px);
+}
+
+.change-password-submit {
+  border: 1px solid #2563eb;
+  background: #2563eb;
+  color: #ffffff;
+  box-shadow: 0 5px 12px rgba(37, 99, 235, 0.18);
+}
+
+.change-password-submit:hover {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 7px 16px rgba(37, 99, 235, 0.24);
+}
+
+.change-password-submit:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+
+/* =========================================================
+   MODAL SCROLLBAR
+========================================================= */
+
+.change-password-modal::-webkit-scrollbar {
+  width: 7px;
+}
+
+.change-password-modal::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+
+.change-password-modal::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+
+.change-password-modal::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+  .user-security-main-content {
+    padding: 30px;
+  }
+
+  .user-security-quick-actions {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  .user-security-main-content {
+    margin-left: 0;
+    width: 100%;
+    padding: 25px 18px;
+  }
+
+  .user-security-page-header h1 {
+    font-size: 25px;
+  }
+
+  .user-security-card-header {
+    padding: 19px;
+  }
+
+  .user-security-items {
+    padding: 5px 19px;
+  }
+
+  .user-security-item {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .user-security-item-left {
+    width: 100%;
+  }
+
+  .security-enabled,
+  .security-status-badge {
+    align-self: flex-start;
+  }
+
+  .user-security-quick-actions {
+    grid-template-columns: 1fr;
+    padding: 18px 19px 20px;
+  }
+
+  .user-security-tip {
+    padding: 18px;
+  }
+
+  .change-password-modal {
+    max-width: 100%;
+    border-radius: 17px;
+  }
+
+  .change-password-header {
+    padding: 20px;
+  }
+
+  .change-password-form {
+    padding: 20px;
+  }
+
+  .change-password-actions {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .change-password-cancel,
+  .change-password-submit {
+    width: 100%;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .user-security-main-content {
+    padding: 20px 14px;
+  }
+
+  .user-security-page-header {
+    margin-bottom: 22px;
+  }
+
+  .user-security-page-header h1 {
+    font-size: 23px;
+  }
+
+  .user-security-card {
+    border-radius: 15px;
+  }
+
+  .user-security-card-header {
+    gap: 11px;
+    padding: 17px;
+  }
+
+  .user-security-card-icon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    font-size: 18px;
+  }
+
+  .user-security-card-header h2 {
+    font-size: 17px;
+  }
+
+  .user-security-item-left {
+    align-items: flex-start;
+  }
+
+  .security-item-icon {
+    width: 39px;
+    height: 39px;
+    min-width: 39px;
+    font-size: 17px;
+  }
+
+  .user-security-tip {
+    gap: 11px;
+  }
+
+  .user-security-tip-icon {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+  }
+
+  .change-password-overlay {
+    padding: 12px;
+  }
+
+  .change-password-modal {
+    max-height: calc(100vh - 24px);
+  }
+
+  .change-password-header {
+    padding: 18px;
+  }
+
+  .change-password-form {
+    padding: 18px;
+  }
+
+  .password-success-message,
+  .password-error-message {
+    margin-left: 18px;
+    margin-right: 18px;
+  }
+}

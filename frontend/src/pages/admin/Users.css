@@ -1,0 +1,1025 @@
+/* =========================================================
+   SECUREPULSE - USER MANAGEMENT
+========================================================= */
+
+
+/* =========================================================
+   USERS PAGE
+========================================================= */
+
+.users-page {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 32px;
+  background: #f8fafc;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.users-page,
+.users-page *,
+.users-page *::before,
+.users-page *::after {
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.admin-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.admin-header > div:first-child {
+  min-width: 0;
+}
+
+.admin-breadcrumb {
+  margin: 0 0 8px;
+  color: #64748b;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.admin-header h1 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+.admin-header > div:first-child > p:last-child {
+  margin: 8px 0 0;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.admin-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  padding: 10px 15px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 999px;
+  color: #334155;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.admin-status span {
+  width: 9px;
+  height: 9px;
+  flex-shrink: 0;
+  background: #22c55e;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px #dcfce7;
+}
+
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.admin-error {
+  width: 100%;
+  margin-bottom: 24px;
+  padding: 16px 18px;
+  background: #fff1f2;
+  border: 1px solid #fecdd3;
+  border-radius: 12px;
+  color: #9f1239;
+}
+
+.admin-error strong {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.admin-error p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   STATISTICS
+========================================================= */
+
+.admin-stats-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.admin-stat-card {
+  min-width: 0;
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+}
+
+.admin-stat-card > div:last-child {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.admin-stat-icon {
+  width: 46px;
+  height: 46px;
+  min-width: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.admin-stat-icon.blue {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.admin-stat-icon.green {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.admin-stat-icon.red {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.admin-stat-icon.orange {
+  background: #ffedd5;
+  color: #ea580c;
+}
+
+.admin-stat-icon.purple {
+  background: #ede9fe;
+  color: #7c3aed;
+}
+
+.admin-stat-card p {
+  margin: 0 0 5px;
+  color: #64748b;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+.admin-stat-card h3 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 25px;
+  line-height: 1;
+  font-weight: 800;
+}
+
+.admin-stat-card span {
+  display: block;
+  margin-top: 6px;
+  color: #94a3b8;
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+
+/* =========================================================
+   USERS MANAGEMENT CARD
+========================================================= */
+
+.users-management-card {
+  width: 100%;
+  min-width: 0;
+  margin-bottom: 30px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+}
+
+
+/* =========================================================
+   USERS HEADER
+========================================================= */
+
+.events-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 22px 24px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.events-header > div:first-child {
+  min-width: 0;
+}
+
+.events-header h2 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.events-header p {
+  margin: 5px 0 0;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   REFRESH BUTTON
+========================================================= */
+
+.view-events-button {
+  min-width: 100px;
+  padding: 9px 16px;
+  border: none;
+  border-radius: 9px;
+  background: #2563eb;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.view-events-button:hover {
+  background: #1d4ed8;
+}
+
+.view-events-button:active {
+  transform: scale(0.98);
+}
+
+.view-events-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   TABLE WRAPPER
+========================================================= */
+
+.events-table-container {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+
+/* =========================================================
+   USERS TABLE
+========================================================= */
+
+.users-table {
+  width: 100%;
+  min-width: 1150px;
+  border-collapse: collapse;
+  background: #ffffff;
+}
+
+.users-table th {
+  padding: 14px 18px;
+  background: #f8fafc;
+  border-bottom: 1px solid #e2e8f0;
+  color: #64748b;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.users-table td {
+  padding: 15px 18px;
+  border-bottom: 1px solid #f1f5f9;
+  color: #475569;
+  font-size: 12px;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.users-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.users-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+
+/* =========================================================
+   USER NAME
+========================================================= */
+
+.user-table-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 180px;
+}
+
+.user-avatar {
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #dbeafe;
+  border-radius: 50%;
+  color: #2563eb;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.user-table-name > div:last-child {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.user-table-name strong {
+  color: #0f172a;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.user-table-name small {
+  color: #2563eb;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   ROLE BADGE
+========================================================= */
+
+.role-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 9px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.admin-role {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.user-role {
+  background: #f1f5f9;
+  color: #475569;
+}
+
+
+/* =========================================================
+   USER STATUS
+========================================================= */
+
+.user-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 9px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.user-status > span {
+  width: 6px;
+  height: 6px;
+  flex-shrink: 0;
+  border-radius: 50%;
+}
+
+
+/* =========================================================
+   ACTIVE
+========================================================= */
+
+.user-status.active {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.user-status.active > span {
+  background: #22c55e;
+}
+
+
+/* =========================================================
+   TEMPORARY LOCK
+========================================================= */
+
+.user-status.temporary-locked {
+  background: #ffedd5;
+  color: #c2410c;
+}
+
+.user-status.temporary-locked > span {
+  background: #f97316;
+}
+
+
+/* =========================================================
+   PERMANENT LOCK
+========================================================= */
+
+.user-status.permanent-locked {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.user-status.permanent-locked > span {
+  background: #ef4444;
+}
+
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.user-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 6px;
+  min-width: max-content;
+}
+
+.action-button {
+  padding: 7px 9px;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 700;
+  white-space: nowrap;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.action-button:active {
+  transform: scale(0.97);
+}
+
+.action-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   TEMPORARY LOCK
+========================================================= */
+
+.temporary-lock-button {
+  background: #fff7ed;
+  color: #c2410c;
+}
+
+.temporary-lock-button:hover {
+  background: #ffedd5;
+}
+
+
+/* =========================================================
+   PERMANENT LOCK
+========================================================= */
+
+.permanent-lock-button {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.permanent-lock-button:hover {
+  background: #fecaca;
+}
+
+
+/* =========================================================
+   UNLOCK
+========================================================= */
+
+.unlock-button {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.unlock-button:hover {
+  background: #bbf7d0;
+}
+
+
+/* =========================================================
+   ROLE BUTTON
+========================================================= */
+
+.role-button {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.role-button:hover {
+  background: #dbeafe;
+}
+
+
+/* =========================================================
+   DELETE
+========================================================= */
+
+.delete-button {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.delete-button:hover {
+  background: #fee2e2;
+}
+
+
+/* =========================================================
+   SELF LABEL
+========================================================= */
+
+.self-label {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 10px;
+  background: #f1f5f9;
+  border-radius: 7px;
+  color: #64748b;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   LOADING / EMPTY
+========================================================= */
+
+.events-message {
+  width: 100%;
+  padding: 55px 20px;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.admin-footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 20px 0 5px;
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   LOCK MODAL OVERLAY
+========================================================= */
+
+.lock-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+
+/* =========================================================
+   LOCK MODAL
+========================================================= */
+
+.lock-modal {
+  width: 100%;
+  max-width: 500px;
+  max-height: calc(100vh - 40px);
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  box-shadow: 0 25px 60px rgba(15, 23, 42, 0.2);
+  overflow-y: auto;
+  overflow-x: hidden;
+  animation: lockModalAppear 0.2s ease-out;
+}
+
+@keyframes lockModalAppear {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* =========================================================
+   MODAL HEADER
+========================================================= */
+
+.lock-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 22px 24px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.lock-modal-header > div {
+  min-width: 0;
+}
+
+.lock-modal-header h2 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.lock-modal-header p {
+  margin: 6px 0 0;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.modal-close-button {
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 8px;
+  background: #f1f5f9;
+  color: #64748b;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 23px;
+  line-height: 1;
+}
+
+.modal-close-button:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+
+/* =========================================================
+   MODAL BODY
+========================================================= */
+
+.lock-modal-body {
+  padding: 24px;
+}
+
+.lock-modal-body label {
+  display: block;
+  margin-bottom: 9px;
+  color: #334155;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.lock-modal-body select {
+  width: 100%;
+  height: 44px;
+  padding: 0 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+  outline: none;
+  background: #ffffff;
+  color: #334155;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 13px;
+}
+
+.lock-modal-body select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px #dbeafe;
+}
+
+
+/* =========================================================
+   MODAL ACTIONS
+========================================================= */
+
+.lock-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 17px 24px;
+  border-top: 1px solid #e2e8f0;
+  background: #f8fafc;
+}
+
+.modal-cancel-button,
+.modal-confirm-button {
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.modal-cancel-button {
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #475569;
+}
+
+.modal-cancel-button:hover {
+  background: #f8fafc;
+}
+
+.modal-confirm-button {
+  border: 1px solid #2563eb;
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.modal-confirm-button:hover {
+  background: #1d4ed8;
+}
+
+.modal-cancel-button:disabled,
+.modal-confirm-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   LARGE TABLET
+========================================================= */
+
+@media (max-width: 1250px) {
+  .admin-stats-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+  .users-page {
+    padding: 24px;
+  }
+
+  .admin-stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .admin-header {
+    flex-direction: column;
+  }
+
+  .admin-status {
+    align-self: flex-start;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  .users-page {
+    width: 100%;
+    min-width: 0;
+    padding: 18px;
+  }
+
+  .admin-header {
+    margin-bottom: 22px;
+  }
+
+  .admin-header h1 {
+    font-size: 24px;
+  }
+
+  .admin-header > div:first-child {
+    width: 100%;
+  }
+
+  .admin-status {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .admin-stats-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .admin-stat-card {
+    min-height: 105px;
+  }
+
+  .events-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .events-header > div {
+    width: 100%;
+  }
+
+  .view-events-button {
+    width: 100%;
+  }
+
+  .users-table {
+    min-width: 1050px;
+  }
+
+  .lock-modal-overlay {
+    padding: 15px;
+  }
+
+  .lock-modal {
+    max-height: calc(100vh - 30px);
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 500px) {
+  .users-page {
+    padding: 14px;
+  }
+
+  .admin-header h1 {
+    font-size: 21px;
+  }
+
+  .admin-breadcrumb {
+    font-size: 10px;
+  }
+
+  .admin-header > div:first-child > p:last-child {
+    font-size: 12px;
+  }
+
+  .admin-stat-card {
+    padding: 16px;
+  }
+
+  .admin-stat-icon {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+  }
+
+  .admin-stat-card h3 {
+    font-size: 23px;
+  }
+
+  .events-header {
+    padding: 18px;
+  }
+
+  .events-header h2 {
+    font-size: 17px;
+  }
+
+  .lock-modal-overlay {
+    padding: 10px;
+  }
+
+  .lock-modal {
+    border-radius: 12px;
+  }
+
+  .lock-modal-header {
+    padding: 18px;
+  }
+
+  .lock-modal-body {
+    padding: 18px;
+  }
+
+  .lock-modal-actions {
+    flex-direction: column-reverse;
+    padding: 15px 18px;
+  }
+
+  .modal-cancel-button,
+  .modal-confirm-button {
+    width: 100%;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+  .users-page {
+    padding: 12px;
+  }
+
+  .admin-header h1 {
+    font-size: 20px;
+  }
+
+  .admin-stat-card {
+    gap: 10px;
+    padding: 14px;
+  }
+
+  .events-header {
+    padding: 16px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .lock-modal,
+  .admin-stat-card,
+  .action-button,
+  .view-events-button {
+    animation: none;
+    transition: none;
+  }
+}
